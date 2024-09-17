@@ -1,0 +1,49 @@
+body {
+    background-color: #374b82;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
+
+.card {
+    border: 0px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.col-md-4 {
+    background-color: #27355c;
+} 
+
+.col-md-4 img {
+    width: 78px;
+} 
+
+.col-md-8 {
+    background-color: #f8f9fa;
+}
+
+.button-start {
+    background-color: #ff4e10;
+    border: 0;
+    color:#f8f9fa;
+}
+
+.button-start:hover {
+    background-color: #ff6d10;
+    border: 0;
+    color:#f8f9fa;
+}
+
+
+/* colors */
+/* sidebar quizcard: #27355c */
+/* trophy: #1f475e */
+/* white:  #f8f9fa*/
