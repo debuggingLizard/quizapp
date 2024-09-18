@@ -10,23 +10,23 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; /* später wieder rausnehmen ggf. */
+    gap: 48px; /* später wieder rausnehmen ggf. */
     flex:1;
+    padding-top: 32px;  /* später wieder rausnehmen ggf. */
 }
 
 .card {
     border: 0px;
-    background-color: blueviolet;
-    /* overflow: hidden; */
+    background-color: transparent;
     width: 100%;
 }
 
 .col-md-3 {
-    /* background-color: #27355c; */
+    background-color: #27355c;
     display: flex;
     flex-direction: column;
     padding: 16px;
     gap: 32px;
-    --bs-card-border-radius: var(--bs-border-radius);
 } 
 
 .col-md-3 img {
@@ -67,9 +67,20 @@ body {
 
 .buttons-navigation {
     position: relative;
-    bottom: 2px;
+    bottom: -8px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.buttons-navigation .btn {
+    border-radius: 50%;
+}
+
+.img-result {
+    width: 100px;
+    height: auto;
+    align-self: center;
+}
 
 /* colors */
 /* sidebar quizcard: #27355c */
