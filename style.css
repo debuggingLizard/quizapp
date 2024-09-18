@@ -9,22 +9,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* später wieder rausnehmen ggf. */
     flex:1;
 }
 
 .card {
     border: 0px;
-    background-color: transparent;
-    overflow: hidden;
+    background-color: blueviolet;
+    /* overflow: hidden; */
     width: 100%;
 }
 
 .col-md-3 {
-    background-color: #27355c;
+    /* background-color: #27355c; */
     display: flex;
     flex-direction: column;
     padding: 16px;
     gap: 32px;
+    --bs-card-border-radius: var(--bs-border-radius);
 } 
 
 .col-md-3 img {
@@ -39,7 +41,7 @@ body {
 } 
 
 .col-md-9 {
-    background-color: #f8f9fa;
+    background-color: #f7f7f7;
 }
 
 .card-body {
@@ -47,6 +49,7 @@ body {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .button-start {
@@ -60,6 +63,11 @@ body {
     background-color: #ff6d10;
     border: 0;
     color:#f8f9fa;
+}
+
+.buttons-navigation {
+    position: relative;
+    bottom: 2px;
 }
 
 
