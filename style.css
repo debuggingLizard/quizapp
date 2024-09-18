@@ -16,24 +16,44 @@ body {
     border: 0px;
     background-color: transparent;
     overflow: hidden;
+    width: 100%;
 }
 
-.col-md-4 {
+.col-md-3 {
     background-color: #27355c;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 32px;
 } 
 
-.col-md-4 img {
+.col-md-3 img {
     width: 78px;
+    align-self: center;
 } 
 
-.col-md-8 {
+.col-md-3 > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+} 
+
+.col-md-9 {
     background-color: #f8f9fa;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 }
 
 .button-start {
     background-color: #ff4e10;
     border: 0;
     color:#f8f9fa;
+    align-self: flex-end;
 }
 
 .button-start:hover {
