@@ -69,7 +69,7 @@ body {
     position: relative;
     bottom: -8px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .buttons-navigation .btn {
@@ -80,6 +80,26 @@ body {
     width: 100px;
     height: auto;
     align-self: center;
+}
+
+.quiz-answer-card {
+    background-color: var(--bs-white);
+}
+
+.quiz-answer-card:hover {
+    cursor: pointer;
+    background-color: #0d6dfda1;
+    color: var(--bs-white);
+}
+
+.question-correct {
+    background-color: #4dbf19 !important;
+    color: var(--bs-white);
+}
+
+.question-false {
+    background-color: #f91818 !important;
+    color: var(--bs-white);
 }
 
 /* colors */

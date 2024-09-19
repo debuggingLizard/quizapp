@@ -11,10 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="questions.js"></script>
     <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">QuizApp</span>
@@ -56,33 +58,32 @@
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">
-                        <p class="card-text text-end">Frage 1 von 10</p>
-                        <h5 class="card-title text-center">Frage</h5>
-                        <div class="card bg-white">
-                            <div class="card-body">
+                        <p class="card-text text-end">Frage 1 von <b id="total-questions-count">0</b></p>
+                        <h5 class="card-title text-center" id="question">Frage</h5>
+                        <div class="card quiz-answer-card" onclick="answer('answer_1')">
+                            <div class="card-body" id="answer_1">
                                 Antwort A
                             </div>
                         </div>
-                        <div class="card bg-white">
-                            <div class="card-body">
+                        <div class="card quiz-answer-card">
+                            <div class="card-body" id="answer_2" onclick="answer('answer_2')">
                                 Antwort B
                             </div>
                         </div>
-                        <div class="card bg-white">
-                            <div class="card-body">
+                        <div class="card quiz-answer-card">
+                            <div class="card-body" id="answer_3" onclick="answer('answer_3')">
                                 Antwort C
                             </div>
                         </div>
-                        <div class="card bg-white">
-                            <div class="card-body">
+                        <div class="card quiz-answer-card">
+                            <div class="card-body" id="answer_4" onclick="answer('answer_4')">
                                 Antwort D
                             </div>
                         </div>
                     </div>
 
                     <div class="buttons-navigation">
-                        <button class="btn btn-primary fw-semibold"><</button>
-                        <button class="btn btn-primary fw-semibold">></button>
+                        <button class="btn btn-primary fw-semibold" id="next-button" disabled>></button>
                     </div>
                 </div>
             </div>
