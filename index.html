@@ -25,7 +25,7 @@
 
     <div class="container">
         <!-- start screen -->
-        <div class="card mb-3">
+        <!-- <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-3">
                     <img src="./img/logo.png" alt="...">
@@ -43,22 +43,23 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- question screen -->
+
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-3">
                     <img src="./img/logo.png" alt="...">
-                    <div>
+                    <!-- <div>
                         <a class="link-light text-decoration-none fw-semibold" href="">HTML</a>
                         <a class="link-light text-decoration-none fw-semibold" href="">CSS</a>
                         <a class="link-light text-decoration-none fw-semibold" href="">JavaScript</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-9">
-                    <div class="card-body">
-                        <p class="card-text text-end">Frage 1 von <b id="total-questions-count">0</b></p>
+                    <!-- questions screen -->
+                    <div class="card-body" id="questions-container">
+                        <p class="card-text text-end">Frage <b id="current-question-count">0</b> von <b id="total-questions-count">0</b></p>
                         <h5 class="card-title text-center" id="question">Frage</h5>
                         <div class="card quiz-answer-card" onclick="answer('answer_1')">
                             <div class="card-body" id="answer_1">
@@ -82,33 +83,21 @@
                         </div>
                     </div>
 
+                    <!-- finish screen -->
+                    <div class="card-body" id="finish-screen" style="display:none;">
+                        <img class="img-result" src="./img/brain result.png" alt="">
+                        <h5 class="card-title text-center">Complete HTML Quiz</h5>
+                        <p class="card-text text-center"><b id="correct-questions-finish-screen">0</b> von <b id="total-questions-finish-screen">0</b> Fragen richtig beantwortet!</p>
+                    </div>
+
                     <div class="buttons-navigation">
-                        <button class="btn btn-primary fw-semibold" id="next-button" disabled>></button>
+                        <button onclick="nextQuestion()" class="btn btn-primary fw-semibold" id="next-button" disabled>></button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- finish screen -->
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="./img/logo.png" alt="...">
-                    <div>
-                        <a class="link-light text-decoration-none fw-semibold" href="">HTML</a>
-                        <a class="link-light text-decoration-none fw-semibold" href="">CSS</a>
-                        <a class="link-light text-decoration-none fw-semibold" href="">JavaScript</a>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <img class="img-result" src="./img/brain result.png" alt="">
-                        <h5 class="card-title text-center">Complete HTML Quiz</h5>
-                        <p class="card-text text-center">Your Score 0/10</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <img id="trophy-image" src="./img/tropy.png" style="display:none;">
     </div>
 
 </body>

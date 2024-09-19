@@ -9,10 +9,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* später wieder rausnehmen ggf. */
-    gap: 48px; /* später wieder rausnehmen ggf. */
     flex:1;
-    padding-top: 32px;  /* später wieder rausnehmen ggf. */
+   
 }
 
 .card {
@@ -100,6 +98,16 @@ body {
 .question-false {
     background-color: #f91818 !important;
     color: var(--bs-white);
+}
+
+#finish-screen {
+    padding: 64px 0;
+}
+
+#trophy-image {
+    position: absolute;
+    right:0;
+    height: 260px;
 }
 
 /* colors */
