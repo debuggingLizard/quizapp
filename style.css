@@ -5,12 +5,31 @@ body {
     flex-direction: column;
 }
 
+.navbar {
+    background-color: #131c31;
+}
+
+.h1 {
+    color: white;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex:1;
    
+}
+
+#progress-bar-quiz-div {
+    position:absolute;
+    top:50px;
+    width:100%;
+    border-radius: 0;
+}
+
+#progress-bar-quiz {
+    background-color: #27355c;
 }
 
 .card {
@@ -71,7 +90,7 @@ body {
 }
 
 .buttons-navigation .btn {
-    border-radius: 50%;
+    width: 20%;
 }
 
 .img-result {
@@ -108,6 +127,11 @@ body {
     position: absolute;
     right:0;
     height: 260px;
+}
+
+#restart-button {
+    width: 40%;
+    align-self: center;
 }
 
 /* colors */

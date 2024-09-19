@@ -2,17 +2,18 @@ let currentQuestion = 0;
 let correctQuestion = 0;
 
 function init() {
-    renderQuestionCount()
-    showQuestion()
+    renderQuestionCount();
+    showQuestion();
 }
 
 function renderQuestionCount() {
     document.getElementById('total-questions-count').innerText = questions.length;
-    
 }
 
 function showQuestion() {
     if (currentQuestion >= questions.length) {
+        document.getElementById('progress-bar-quiz').innerHTML = `100 %`;
+        document.getElementById('progress-bar-quiz').style = `width: 100%`;
         document.getElementById('finish-screen').style = '';
         document.getElementById('trophy-image').style = '';
         document.getElementById('questions-container').style = 'display:none';
@@ -22,6 +23,10 @@ function showQuestion() {
         document.getElementById('total-questions-finish-screen').innerHTML = questions.length;
 
     } else {
+        let progressPercent = Math.round((currentQuestion / questions.length) * 100);
+        document.getElementById('progress-bar-quiz').innerHTML = `${progressPercent} %`;
+        document.getElementById('progress-bar-quiz').style = `width: ${progressPercent}%`;
+
         let question = questions[currentQuestion];
 
         document.getElementById('current-question-count').innerText = currentQuestion + 1;
@@ -62,4 +67,16 @@ function resetQuestionTemplate() {
         document.getElementById('answer_' + i).parentNode.classList.remove('question-false');
         document.getElementById('answer_' + i).parentNode.classList.remove('question-correct');
     }
+}
+
+function restartGame() {
+    currentQuestion = 0;
+    correctQuestion = 0;
+
+    document.getElementById('finish-screen').style = 'display:none';
+    document.getElementById('trophy-image').style = 'display:none';
+    document.getElementById('questions-container').style = '';
+    document.getElementById('next-button').style = '';
+
+    init();
 }
