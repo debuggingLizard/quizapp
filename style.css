@@ -36,6 +36,7 @@ body {
     border: 0px;
     background-color: transparent;
     width: 100%;
+    max-width: 800px;
 }
 
 .col-md-3 {
@@ -127,6 +128,7 @@ body {
     position: absolute;
     right:0;
     height: 260px;
+    margin-bottom: 64px;
 }
 
 #restart-button {
@@ -134,7 +136,14 @@ body {
     align-self: center;
 }
 
-/* colors */
-/* sidebar quizcard: #27355c */
-/* trophy: #1f475e */
-/* white:  #f8f9fa*/
+@media (max-width: 550px) {
+    #trophy-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 400px) {
+    #trophy-image {
+        height: 100px;
+    }
+}

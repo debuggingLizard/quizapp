@@ -1,5 +1,8 @@
 let currentQuestion = 0;
 let correctQuestion = 0;
+let AUDIO_CORRECT = new Audio('sounds/correct.mp3');
+let AUDIO_WRONG = new Audio('sounds/wrong.mp3');
+let AUDIO_FINISHED = new Audio('sounds/finished.mp3');
 
 function init() {
     renderQuestionCount();
@@ -14,6 +17,7 @@ function showQuestion() {
     if (currentQuestion >= questions.length) {
         document.getElementById('progress-bar-quiz').innerHTML = `100 %`;
         document.getElementById('progress-bar-quiz').style = `width: 100%`;
+        AUDIO_FINISHED.play();
         document.getElementById('finish-screen').style = '';
         document.getElementById('trophy-image').style = '';
         document.getElementById('questions-container').style = 'display:none';
@@ -45,10 +49,12 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['right_answer']) {
         document.getElementById(selection).parentNode.classList.add('question-correct');
+        AUDIO_CORRECT.play();
         correctQuestion++;
     } else {
         document.getElementById(selection).parentNode.classList.add('question-false');
         document.getElementById(idRightAnswer).parentNode.classList.add('question-correct');
+        AUDIO_WRONG.play();
     }
 
     document.getElementById('next-button').disabled = false;
