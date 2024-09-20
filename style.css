@@ -17,14 +17,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex:1;
-   
+    flex: 1;
 }
 
 #progress-bar-quiz-div {
-    position:absolute;
-    top:50px;
-    width:100%;
+    position: absolute;
+    top: 50px;
+    width: 100%;
     border-radius: 0;
 }
 
@@ -45,18 +44,18 @@ body {
     flex-direction: column;
     padding: 16px;
     gap: 32px;
-} 
+}
 
 .col-md-3 img {
     width: 78px;
     align-self: center;
-} 
+}
 
-.col-md-3 > div {
+.col-md-3>div {
     display: flex;
     flex-direction: column;
     gap: 16px;
-} 
+}
 
 .col-md-9 {
     background-color: #f7f7f7;
@@ -73,14 +72,14 @@ body {
 .button-start {
     background-color: #ff4e10;
     border: 0;
-    color:#f8f9fa;
+    color: #f8f9fa;
     align-self: flex-end;
 }
 
 .button-start:hover {
     background-color: #ff6d10;
     border: 0;
-    color:#f8f9fa;
+    color: #f8f9fa;
 }
 
 .buttons-navigation {
@@ -126,7 +125,7 @@ body {
 
 #trophy-image {
     position: absolute;
-    right:0;
+    right: 0;
     height: 260px;
     margin-bottom: 64px;
 }
@@ -134,6 +133,10 @@ body {
 #restart-button {
     width: 40%;
     align-self: center;
+}
+
+.btn:disabled {
+    border-color: transparent;
 }
 
 @media (max-width: 550px) {
